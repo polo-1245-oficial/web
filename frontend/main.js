@@ -52,16 +52,25 @@ document.addEventListener("DOMContentLoaded", () => {
                     const activityName = activities[0].name;
                     appHeader.innerText = `Jugando a ${activityName}`;
         
-                    spotifyPlayer.style.display = 'block';
-                    txt.style.display = 'block';
-        
-                    document.getElementById('song-image').src = spoti.album_art_url;
-                    document.getElementById('song-title').innerText = spoti.song;
-                    document.getElementById('song-details').innerText = `${spoti.artist} - ${spoti.album}`;
+                    if (spoti = false){
+                        spotifyPlayer.style.display = 'none';
+                        txt.style.display = 'none';
+               } else {
+                spotifyPlayer.style.display = 'block';
+                    
+                txt.style.display = 'block';
+                
+                document.getElementById('song-image').src = spoti.album_art_url;
+                document.getElementById('song-title').innerText = spoti.song;
+                document.getElementById('song-details').innerText = `${spoti.artist} - ${spoti.album}`;
+               
+                    }
                 } else {
                     appHeader.innerText = "No estoy haciendo nada";
                     spotifyPlayer.style.display = 'none';
                     txt.style.display = 'none';
+
+
                 }
             })
             .catch(error => console.error('api ', error));
