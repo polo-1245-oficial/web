@@ -15,7 +15,7 @@ router.get('/radio/nowPlaying', async (req, res) => {
     }
 });
 
-router.get('/radio/stream.pls', async (req, res) => {
+router.get('/radio/stream', async (req, res) => {
     try {
         const response = await axios.get(global.url+"/listen.pls?sid=1", {
             responseType: 'stream'
