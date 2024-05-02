@@ -4,10 +4,10 @@ const router = express.Router();
 const { createClient } = require('redis');
 
 const client = createClient({
-    password: global.secretredis,
+    password: process.env.REDISSECRET,
     socket: {
-        host: global.hostredis,
-        port: global.portredis
+        host: process.env.REDISHOST,
+        port: process.env.REDISPORT
     }
 });
 
