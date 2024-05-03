@@ -66,6 +66,6 @@ router.get('/meteo', async (req, res) => {
   res.json(JSON.parse(meteoredischeck))
 }*/
 //ya que hice el coñazo del redis podría meterlo para todo lo otro pero que puta pereza macho VERCEL NO ME QUIERE
-});
+);
 
 module.exports = router;
