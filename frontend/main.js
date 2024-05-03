@@ -87,7 +87,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 var horaActual = new Date();
                 const horalocal123 = document.getElementById('horalocal');
             
-                horaActual.setHours(horaActual.getHours() + 1);
+                horaActual.setHours(horaActual.getHours() + 2);
                 horalocal123.innerText = horaActual.toLocaleTimeString('es-ES');
             }, 50);
             
