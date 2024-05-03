@@ -3,7 +3,15 @@ const url = "https://api.web.tux.software"
 document.addEventListener("DOMContentLoaded", () => {
     const statusCircle = document.querySelector('.circle');
     statusCircle.style.backgroundColor = 'transparent';
-
+        
+    fetch(url+"/meteo")
+    .then(response => response.json())
+    .then(data => {
+        document.getElementById('img').src = `${data.icon}`;
+        document.getElementById('tiempolocal').innerText = `${data.temp}°`;
+        document.getElementById('grados').innerText = `${data.condicion}`;
+    
+    })
         fetch(url+'/me')
             .then(response => response.json())
             .then(data => {
@@ -75,8 +83,15 @@ document.addEventListener("DOMContentLoaded", () => {
             })
             .catch(error => console.error('api ', error));
         
-
-
+            setInterval(() => {
+                var horaActual = new Date();
+                const horalocal123 = document.getElementById('horalocal');
+            
+                horaActual.setHours(horaActual.getHours() + 1);
+                horalocal123.innerText = horaActual.toLocaleTimeString('es-ES');
+            }, 50);
+            
+        
     setInterval(() => {
         fetch(url+'/me')
         .then(response => response.json())
@@ -105,7 +120,14 @@ document.addEventListener("DOMContentLoaded", () => {
         
         })
         .catch(error => console.error('Error:', error));
-
+        fetch(url+"/meteo")
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById('img').src = `${data.icon}`;
+            document.getElementById('tiempolocal').innerText = `${data.temp}°`;
+            document.getElementById('grados').innerText = `${data.condicion}`;
+        
+        }) //ahora siq ue me la suda las veces sque se haga la puta peti
         fetch(url + '/me/activities')
         .then(response => response.json())
         .then(data => {
