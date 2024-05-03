@@ -1,86 +1,59 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Polo_1245</title>
-    <link rel="icon" href="https://cdn.discordapp.com/avatars/725316907187568701/348956de53d5fc33412b2d3f7258ec7c">
-    <meta name="title" content="Polo_1245">
-    <meta name="description" content="El sitio web de Polo_1245">
-    <meta name="keywords" content="tux, tuxsoftware, tux.software, Polo_1245, polo, poloelpoco, elpocopolo, zstats, chillcenter, discord, github">
-    <meta name="robots" content="index, follow">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta name="language" content="Spanish">
-    <meta name="revisit-after" content="2 days">
-    <meta name="author" content="Polo_1245">
-    <meta property="twitter:url" content="https://tux.software/" />
-    <meta property="twitter:title" content="Polo_1245" />
-    <meta property="twitter:description" content="" />
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
-    <link rel="stylesheet" type="text/css" media="screen" href="repro.css">
-    <script src="https://unpkg.com/twemoji@latest/dist/twemoji.min.js" crossorigin="anonymous"></script>
-    <script defer src="main.js"></script>
-</head>
-<body>
-    <div class="app-header">
-        <img id="header-avatar" src="" alt="User Avatar">
-        <div class="circle"></div>
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500&display=swap');
 
-        <div class="header-text">
-            <a href="/" style="color: #eb7100; text-decoration: none;">Polo_1245</a>
-            <p style="color: gray; margin: 0;">Fetching...</p>
-        </div>
-        <p style="color: #fff; font-size: 40px; margin: 0 10px;">|</p>
-        <a href="portfolio.html" style="color: #eb7100; margin-left: 10px;">¿Qué he hecho?</a>
-        <a href="blog.html" style="color: #eb7100; margin-left: 10px;">Blog</a>
-    </div>
-    
-    <div class="main">
-        <center>
-            <p style="color: #eb7100; font-size: 30px; margin-top: 0px;">Programador, camionero virtual y gilipollas<br>otter friendly 🦦</p>
-        </center>
-    
-        <p style="color: #eb7100; font-size: 20px; margin-bottom: -20px; display: none;" id="spotify-txt">Escuchando</p>
-        <div class="rectangle-container" id="spotify-container" style="display: none;">
-            <div class="music-player">
-                <img id="song-image" src="" alt="Song Image">
-                <div class="song-info">
-                    <p class="song-title" id="song-title"></p>
-                    <p class="song-details" id="song-details"></p>
-                </div>
-            </div>
-        </div>
-        <p style="color: #eb7100; font-size: 20px; margin-bottom: 20px;" id="horalocal-txt">Hora local y tiempo local</p>
+body {
+    font-family: 'JetBrains Mono', monospace;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #0f0f0f;
+}
 
-        <div class="asd">
-            <div class="rectangle3-container">
-                <p style="color: #fff; font-size: 20px;" id="horalocal">alguna</p>
-            </div>
-    
-            <div class="rectangle32-container" style="display: flex; align-items: center;">
-                <p style="color: #fff; font-size: 20px; margin-left: 4px;" id="tiempolocal">alguna</p>
-                <img src="" id="img" style="margin-left: -10px; margin-right: 20px;"> <!-- al que le de toc que me lo haga el que para algo es opensource -->
-                <p style="color: #fff; font-size: 20px;" id="grados">alguna</p>
+img.emoji {
+    height: 1em;
+    width: 1em;
+    margin-bottom: -5px; /* si mahoma no va a la montañana la montaña va a mahoma */
+ }
 
-            </div>
+.app-header {
+    position: relative;
+    margin: 40px 0 50px;
 
-        </div>
-        <center><p style="color: #eb7100; font-size: 25px; margin-top: 30px;">made in Spain 🇪🇸</p></center>
-    </div>
-    
+    border: 2px solid white;
+    border-radius: 25px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px) saturate(180%);
+    margin-bottom: 50px;
+}
+.circle {
+    position: absolute;
+    bottom: 10px;
+    left: 40px;
+    width: 15px;
+    height: 15px;
+    background-color: invisible;
+    border-radius: 50%;
+}
 
-      
-    
-        
-   
-    
+.app-header img {
+    display: inline-block; 
+    border-radius: 25px;
+    max-width: 40px;
+    height: auto;
+    margin-right: 10px;
+}
 
+.header-text {
+    text-align: center;
+}
 
-    <a href="https://twitter.com/Polo_1245Ofi" style="color: #0bbaff; margin: auto; margin-bottom: 100px; font-size: 20px; text-decoration: none;">X (Twitter)</a>
-</body>
-<script>
-    twemoji.parse(document.body);
-
-    </script>
-</html>
+.main {
+    margin: auto;
+    margin-top: 50px;
+}
