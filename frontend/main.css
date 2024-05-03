@@ -15,6 +15,7 @@ body {
 img.emoji {
     height: 1em;
     width: 1em;
+    margin-bottom: -5px; /* si mahoma no va a la montañana la montaña va a mahoma */
  }
 
 .app-header {
@@ -56,4 +57,3 @@ img.emoji {
     margin: auto;
     margin-top: 50px;
 }
-
