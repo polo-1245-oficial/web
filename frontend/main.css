@@ -12,6 +12,11 @@ body {
     background-color: #0f0f0f;
 }
 
+img.emoji {
+    height: 1em;
+    width: 1em;
+ }
+
 .app-header {
     position: relative;
     margin: 40px 0 50px;
@@ -51,3 +56,4 @@ body {
     margin: auto;
     margin-top: 50px;
 }
+
