@@ -46,6 +46,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 const txt = document.getElementById('spotify-txt');
                 const appHeader = document.querySelector('.app-header p[style="color: gray; margin: 0;"]');
                 const spoti = data.spotify;
+                
                 const activities = data.act;
         
                 if (spoti && !activities) {
@@ -56,7 +57,10 @@ document.addEventListener("DOMContentLoaded", () => {
                     document.getElementById('song-image').src = spoti.album_art_url;
                     document.getElementById('song-title').innerText = spoti.song;
                     document.getElementById('song-details').innerText = `${spoti.artist} - ${spoti.album}`;
+                    spotifyPlayer.classList.add('listening-animation');
                 } else if (activities.length > 0) {
+                    spotifyPlayer.classList.remove('listening-animation');
+
                     const activityName = activities[0].name;
                     appHeader.innerText = `Jugando a ${activityName}`;
         
@@ -84,12 +88,16 @@ document.addEventListener("DOMContentLoaded", () => {
             .catch(error => console.error('api ', error));
         
             setInterval(() => {
-                var horaActual = new Date();
+                var horaActualUTC = new Date();
                 const horalocal123 = document.getElementById('horalocal');
-            
-                horaActual.setHours(horaActual.getHours());
-                horalocal123.innerText = horaActual.toLocaleTimeString('es-ES');
+                
+                const horaUTCString = horaActualUTC.getUTCHours().toString().padStart(2, '0') + ':' +
+                                     horaActualUTC.getUTCMinutes().toString().padStart(2, '0') + ':' +
+                                     horaActualUTC.getUTCSeconds().toString().padStart(2, '0');
+                //thx gpt
+                horalocal123.innerText = horaUTCString;
             }, 50);
+            
             
         
     setInterval(() => {
