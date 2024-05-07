@@ -90,13 +90,17 @@ document.addEventListener("DOMContentLoaded", () => {
             setInterval(() => {
                 var horaActualUTC = new Date();
                 const horalocal123 = document.getElementById('horalocal');
+            
+                // gracias gpt
+                const horaLocal = (horaActualUTC.getUTCHours() + 2) % 24;
                 
-                const horaUTCString = horaActualUTC.getUTCHours().toString().padStart(2, '0') + ':' +
+                const horaUTCString = horaLocal.toString().padStart(2, '0') + ':' +
                                      horaActualUTC.getUTCMinutes().toString().padStart(2, '0') + ':' +
                                      horaActualUTC.getUTCSeconds().toString().padStart(2, '0');
-                //thx gpt
+                
                 horalocal123.innerText = horaUTCString;
             }, 50);
+            
             
             
         
