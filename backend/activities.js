@@ -32,9 +32,14 @@ router.get('/me/activities', async (req, res) => {
       act = filteredActivities;
     }
 
+    const avatar = response.data.data.discord_user.avatar;
+    const status = response.data.data.discord_status;
+
     const responseData = {
       spotify,
       act,
+      avatar,
+      status,
     };
 
     res.json(responseData);
