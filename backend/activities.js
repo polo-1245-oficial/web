@@ -11,6 +11,9 @@ router.get('/me/activities', async (req, res) => {
 
     if (spotistatus === true) {
       spotify = response.data.data.spotify;
+       if (spotify.artists && typeof spotify.artists === 'string') {
+        spotify.artists = spotify.artists.replace(/;/g, ',');
+      }
     } else {
       spotify = false;
     }
