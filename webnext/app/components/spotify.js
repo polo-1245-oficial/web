@@ -8,7 +8,7 @@ export default function Spotify() {
     useEffect(() => {
       const fetchData = async () => {
         try {
-          const res = await fetch('https://api.web.tux.software/me', { cache: "no-store" });
+          const res = await fetch('https://api.tux.software/me', { cache: "no-store" });
           if (!res.ok) {
             throw new Error('Failed to fetch data');
           }
