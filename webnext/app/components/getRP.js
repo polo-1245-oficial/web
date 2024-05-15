@@ -3,7 +3,7 @@ import { motion, useAnimation } from 'framer-motion';
 import TimeStamp from '../utils/timestampTohoraleible'
 
 export default function GetRP({ data }) {
-   
+  const spotify = data.spotify;
   const activities = data.act;
   const [isHovered, setIsHovered] = useState(false);
   const controls = useAnimation();
@@ -30,7 +30,30 @@ export default function GetRP({ data }) {
     }
     return null; 
   }
- 
+  if (spotify !== false ){
+    const content = activities.length > 0 ? (
+      <div onMouseOver={handleMouseOver} onMouseOut={handleMouseOut}>
+        <p className="text-gray-400">
+          Escuchando {spotify.song}
+        </p>
+        <motion.div
+          style={{ opacity: 0, y: -10 }}
+          animate={controls}
+          transition={{ duration: 0.3 }}
+        >
+          {isHovered && <p className="text-gray-400">De {spotify.artist}</p>}
+        </motion.div>
+      </div>
+    ) : (
+      <p className="text-gray-400">No estoy haciendo nada</p>
+    );
+    
+    return (
+      <div>
+        {content}
+      </div>
+    );
+  } else {
   const content = activities.length > 0 ? (
     <div onMouseOver={handleMouseOver} onMouseOut={handleMouseOut}>
       <p className="text-gray-400">
@@ -48,10 +71,11 @@ export default function GetRP({ data }) {
   ) : (
     <p className="text-gray-400">No estoy haciendo nada</p>
   );
-
+  
   return (
     <div>
       {content}
     </div>
   );
+  }
 }
