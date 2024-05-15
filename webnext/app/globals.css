@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: #0f0f0f;
+}
+.status-indicator {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
