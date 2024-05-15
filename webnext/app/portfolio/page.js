@@ -12,8 +12,8 @@ const App = () => {
         <Card titulo="zcapipackage" descripcion="Un pequeño paquete para Node.JS para usar la API de ZStats" link1="https://github.com/polo-1245-oficial/zcapipackage" textlink1="Source Code" link2="https://www.npmjs.com/package/toadzonecraftapi" textlink2="Paquete en NPM" />
         <Card titulo="ChillCenter" descripcion="Una pequeña network de Minecraft enfocada en el survival"/>
         <Card titulo="NDI Remastered" descripcion={"Un fork de un mod de Minecraft para poder añadir clientes NDI"} link1="https://modrinth.com/mod/ndi-remastered" textlink1={"Modrinth"} link2="https://www.curseforge.com/minecraft/mc-mods/ndi-remastered" textlink2={"CurseForge"} link3="https://github.com/polo-1245-oficial/MC-NDI-Remastered" textlink3={"Source Code"}/>
-        <Card titulo={"tux.software Backend"} descripcion={"El backend en este caso se encarga de realizar peticiones a diferentes APIs como, Lanyard y del tiempo."} link1="https://api.web.tux.software" textlink1={"API"} link2={"https://github.com/polo-1245-oficial/web"} textlink2={"Source Code"} />
-        <Card titulo={"tux.software Frontend"} descripcion={"(Lo que estás viendo). Se encarga de hacer visualizar la API. Hecho en Next.JS."} link1={"https://github.com/polo-1245-oficial/web"} textlink1={"Source Code"} />
+        <Card titulo={"tux.software Backend"} descripcion={"El backend en este caso se encarga de realizar peticiones a diferentes APIs como, Lanyard y del tiempo."} link1="https://api.web.tux.software" textlink1={"API"} link2={"https://github.com/polo-1245-oficial/web/tree/main/backend"} textlink2={"Source Code"} />
+        <Card titulo={"tux.software Frontend"} descripcion={"(Lo que estás viendo). Se encarga de hacer visualizar la API. Hecho en Next.JS."} link1={"https://github.com/polo-1245-oficial/web/tree/main/webnext"} textlink1={"Source Code"} />
       </div>
       </div>
       <p className='text-xl text-white text-center mt-3'>Quieres más? Aquí tienes enlace a mi GitHub:</p>
