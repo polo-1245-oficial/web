@@ -1,7 +1,6 @@
 const express = require('express');
 const cors = require('cors');
 require('dotenv').config();
-const activitiesRouter = require('./activities');
 const meRouter = require('./me');
 const radioRouter = require('./radio');
 
@@ -18,7 +17,6 @@ global.apikey = process.env.APIKEY; //api key de weatherapi.com
 
 app.use(cors());
 
-app.use(activitiesRouter);
 app.use(meRouter);
 app.use(radioRouter);
 
