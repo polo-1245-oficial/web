@@ -31,7 +31,7 @@ export default function GetRP({ data }) {
     return null; 
   }
   if (spotify !== false ){
-    const content = activities.length > 0 ? (
+    const content = (
       <div onMouseOver={handleMouseOver} onMouseOut={handleMouseOut}>
         <p className="text-gray-400">
           Escuchando {spotify.song}
