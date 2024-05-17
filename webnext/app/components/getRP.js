@@ -44,8 +44,6 @@ export default function GetRP({ data }) {
           {isHovered && <p className="text-gray-400">De {spotify.artist}</p>}
         </motion.div>
       </div>
-    ) : (
-      <p className="text-gray-400">No estoy haciendo nada</p>
     );
     
     return (
