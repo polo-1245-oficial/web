@@ -8,7 +8,7 @@ const App = () => {
     return (
       <main>
         <div className="flex flex-col justify-center items-center mt-20">
-          <p className="text-white text-3xl text-center">Programador, sysadmin y gilipollas</p>
+          <p className="text-white text-3xl text-center">Programador, sysadmin y humano 🙍‍♂️</p>
         </div>
         <div className="flex flex-col justify-center items-center mt-4">
           <p className="text-white text-center text-2xl">otter friendly 🦦</p> {/* eeee emoji asqueroso pero es lo q hay */}
