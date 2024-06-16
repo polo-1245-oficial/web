@@ -31,8 +31,9 @@ export default async function Page({ params }) {
   console.log(JSON.stringify(test));
   const item = test[0];
 
+
   return (
-    <main>
+    <main className="container mx-auto px-4">
       <div className="text-white justify-center flex text-center mt-4 text-7xl">{item?.title}</div>
       <div className="text-white justify-center flex text-center mt-4 text-2xl">{item?.tags}</div>
       <div
